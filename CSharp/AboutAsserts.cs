@@ -40,8 +40,7 @@ namespace DotNetKoans.CSharp
         [Koan(5)]
         public void FillInValues() 
         {
-            var FILL_ME_IN = 2;
-            Assert.Equal(FILL_ME_IN, 1 + 1);
+            Assert.Equal(2, 1 + 1);
         }
     }
 }

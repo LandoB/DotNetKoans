@@ -8,7 +8,7 @@ namespace DotNetKoans.CSharp
         [Koan(1)]
         public void NilIsNotAnObject()
         {
-            Assert.True(!typeof(object).IsAssignableFrom(null)); //not everything is an object
+            Assert.False(typeof(object).IsAssignableFrom(null)); //not everything is an object
         }
 
         [Koan(2)]
@@ -26,7 +26,7 @@ namespace DotNetKoans.CSharp
             {
                 nothing.ToString();
             }
-            catch (System.Exception ex)
+            catch (System.NullReferenceException ex)
             {
                 Assert.Contains("Object reference not set to an instance of an object." as string, ex.Message);
             }
